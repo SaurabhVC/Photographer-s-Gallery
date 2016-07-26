@@ -1,0 +1,204 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Snapshoot</title>
+
+<link rel='stylesheet prefetch' href='pswp.css'>
+<link rel='stylesheet prefetch' href='default-skin.css'>
+<link rel='stylesheet prrfetch' href='loader.css'>
+        <link rel="stylesheet" href="style.css">
+<style>
+ #photos {
+  /* Prevent vertical gaps */
+  line-height: 0px;
+  position: absolute;
+  top: 10%;
+  left: 8%;
+   width: 80%;
+   overflow: scroll;
+   margin-bottom: 10%;
+   padding: 0px;
+  -webkit-column-count: 4;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    4;
+  -moz-column-gap:      0px;
+  column-count:         4;
+  column-gap:           0px;  
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+</style>
+</head>
+<body bgcolor="#0000">
+	<div id="loader-wrapper">
+			<div id="loader"></div>
+
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+		</div>
+<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery"> 
+ <section id="photos">
+ <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> 
+ <a href="imgs/a.jpg" itemprop="contentUrl" data-size="477x720">
+	<img src="imgs/a.jpg" itemprop="thumbnail" alt="Image description" />
+   </a>
+  <figcaption itemprop="caption description">@Mulshi Dam backwater, Pune</figcaption>
+ </figure>  
+
+ <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> 
+  <a href="imgs/b.jpg" itemprop="contentUrl" data-size="2448x1378">
+	<img src="imgs/b.jpg" itemprop="thumbnail" alt="Image description" />
+   </a>
+  <figcaption itemprop="caption description">The Human Factor</figcaption> 
+ </figure> 
+ <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> 
+ <a href="imgs/c.jpg" itemprop="contentUrl" data-size="3072x3072">
+	<img src="imgs/c.jpg" itemprop="thumbnail" alt="Image description" />
+   </a>
+   <figcaption itemprop="caption description">Mulshi Dam backwater, Pune</figcaption>
+ </figure>
+ <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> 
+  <a href="imgs/d.jpg" itemprop="contentUrl" data-size="1224x1224">
+	<img src="imgs/d.jpg" itemprop="thumbnail" alt="Image description" />
+   </a>
+   <figcaption itemprop="caption description">The Hymn</figcaption>
+ </figure> 
+ <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> 
+  <a href="imgs/e.jpg" itemprop="contentUrl" data-size="1994x1994">
+	<img src="imgs/e.jpg" itemprop="thumbnail" alt="Image description" />
+   </a>
+    <figcaption itemprop="caption description">tranquillity...</figcaption>
+ </figure>
+  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> 
+  <a href="imgs/f.jpg" itemprop="contentUrl" data-size="1280x647">
+	<img src="imgs/f.jpg" itemprop="thumbnail" alt="Image description" />
+   </a>
+    <figcaption itemprop="caption description">...</figcaption>
+ </figure>
+   <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> 
+  <a href="imgs/g.jpg" itemprop="contentUrl" data-size="1280x853">
+	<img src="imgs/g.jpg" itemprop="thumbnail" alt="Image description" />
+   </a>
+    <figcaption itemprop="caption description">Living...</figcaption>
+ </figure>
+   <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"> 
+  <a href="imgs/h.jpg" itemprop="contentUrl" data-size="1280x960">
+	<img src="imgs/h.jpg" itemprop="thumbnail" alt="Image description" />
+   </a>
+    <figcaption itemprop="caption description">Towards divinity...!</figcaption>
+ </figure>
+ </section>
+ </div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+
+<script src='photoswipe.min.js'></script>
+<script src='photoswipe-ui-default.min.js'></script>
+<script src="jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+        <script src="index.js"></script>
+
+</body>
+</html>

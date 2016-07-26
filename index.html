@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Darkflash.in</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+	<script src="jquery.min.js"></script>
+
+	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+	<script type="text/javascript">
+		var deleteLog = false;
+
+		$(document).ready(function() {
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		navigation: {
+		            'textColor': '#1a1a1a',
+		            'bulletsColor': '#ccc',
+		            'position': 'right',
+		            'tooltips': ['Landscapes', 'Phonography', 'The Crew', 'Page 4']
+		        }
+			});
+	    });
+		window.onload = function() {
+		if(!window.location.hash) {
+        window.location = window.location + '#Home';
+        window.location.reload();
+	  }
+	}
+    </script>
+
+    <style>
+    /* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section1,
+	#section2,
+	#section3{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section1{
+		background-image: url(imgs/bg1.jpg);
+		padding: 6% 0 0 0;
+	}
+	#section2{
+		background-image: url(imgs/bg2.jpg);
+		padding: 6% 0 0 0;
+		}
+	#section3{
+		background-image: url(imgs/bg3.jpg);
+		padding: 6% 0 0 0;
+	}
+
+@font-face {
+    font-family: 'YourFontName'; 
+    src: url('http://darkflash.in/LCALLIG.TTF'); }	
+
+	#section3 h1{
+		color: #000;
+	}
+	#section1 h1{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 90px;
+		color: #000;
+		text-shadow: 1px 5px 20px #000;
+		opacity: 0.4;
+		font-size: 700%;
+		font-family: "YourFontName";
+	}
+
+	#section2 .intro{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 30px;
+	}
+	
+	#section2 h1,
+	#section2 p{
+		position: absolute;
+		margin: 0 auto;
+		left : 40%;
+		top : 120px;
+		color : #000;
+		text-shadow: 1px 5px 20px #000;
+		opacity: 0.6;
+		font-size: 600%;
+		font-family: "YourFontName";
+	}
+
+	#section3 h1{
+		position: absolute;
+		left : 5%;
+		top  : 340px;
+		text-shadow: 1px 5px 20px #000;
+		color: #fff;
+		opacity: 0.6;
+		font-size: 600%;
+		font-family: "YourFontName";
+	}
+
+	#section3 p{
+	 position: absolute;
+	 left: 1%;
+	 top: 2%;
+	}	
+	#infoMenu li a{
+			color: #fff;
+	}
+	
+.button {
+    background-color: none;
+	position : absolute;
+	top : 220px;
+	right : 41%;
+    border: none;
+    color: black;
+	opacity: 0.4;
+	font-family: "YourFontName";
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 23px;
+	font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: none;
+	position : absolute;
+	top : 260px;
+	right : 31%;
+    border: none;
+    color: black;
+	opacity: 0.5;
+	font-family: "YourFontName";
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 23px;
+	font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: none;
+	position : absolute;
+	top : 450px;
+	left : 14%;
+    border: none;
+    color: white;
+	text-shadow: 1px 5px 20px #000;
+	opacity: 0.9;
+	font-family: "YourFontName";
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 23px;
+	font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+	
+    </style>
+
+</head>
+<body>
+	<div id="pagepiling">
+	    <div class="section" id="section1">
+	    	<h1>Landscapes</h1>	
+		<a href="http://www.darkflash.in/gallery/grid.html" class="button">Get Inside
+		</a>			
+	    </div>
+	    <div class="section" id="section2">
+	    	<div class="intro">
+	    		<h1>Snapshoot</h1>
+			</div>
+			<a href="http://www.darkflash.in/gallery_snapshoot/grid_snapshoot.html" class="button1">Get Inside
+			</a>
+			</div>	
+	    <div class="section" id="section3">
+	    	<div class="intro">
+	    		<h1>The Crew</h1>
+	    		<p></p>
+	    	</div>
+			<a href="http://www.klouddata.com" class="button2">Reunirse Amigos...
+			</a>
+			<p href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=www.darkflash.in&digit=style/plain/1/&reloads=1" alt="" title="" border=""></p>
+			<br /><br />	
+	    </div>
+	</div>
+</body>
+</html>
